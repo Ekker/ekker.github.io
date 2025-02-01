@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bluetooth - Tag - My New Hugo Site</title>
+    <link>https://example.org/tags/bluetooth/</link>
+    <description>My New Hugo Site</description>
+    <generator>Hugo 0.142.0 &amp; FixIt v0.3.17-8b402129</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Feb 2025 17:09:51 +0800</lastBuildDate>
+    <atom:link href="https://example.org/tags/bluetooth/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bt_overview</title>
+      <link>https://example.org/posts/a3a259c/</link>
+      <pubDate>Sat, 01 Feb 2025 17:09:51 +0800</pubDate>
+      <guid>https://example.org/posts/a3a259c/</guid>
+      <category domain="https://example.org/categories/bluetooth/">Bluetooth</category>
+      <description>&lt;h3 id=&#34;bluetooth-overview&#34; class=&#34;heading-element&#34;&gt;&lt;span&gt;Bluetooth Overview&lt;/span&gt;&#xA;  &lt;a href=&#34;#bluetooth-overview&#34; class=&#34;heading-mark&#34;&gt;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&lt;p&gt;在看藍芽相關規範時通常會先遇到下面這兩個名詞, 全名縮寫&#xA;BR/EDR- Basic Rate/Enhanced Data Rate&#xA;BLE - Bluetooth Low Energy&lt;/p&gt;&#xA;&lt;p&gt;這兩個代表了藍芽在實作上不同的規範, 白話說就是有不同的物理實體實作跟通道管理方式.&#xA;在Spec中也常會看見, Profile, Protocol 兩個用詞.&#xA;Profile - 通常代表一組服務或是功能, 用來標準化裝置間的溝通方式跟狀態.&#xA;Protocol - 如同一班網路常見的http protocol 表示裝置間如何透過封包的定義互相傳輸資料.&lt;/p&gt;&#xA;&lt;p&gt;BLE&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;advertising 發出的-&amp;gt;advertiser&lt;/li&gt;&#xA;&lt;li&gt;接收的 -&amp;gt; scanner&lt;/li&gt;&#xA;&lt;li&gt;advertising可以發出 &amp;ldquo;Connectable&amp;rdquo; 可連接的adv , 然後發起連接的裝置(initiator) 會發出一個ACL 連線要求, 然後建立連線. 此時advertiser接收連線後會停止adv event, 然後根據連線建立的參數啟動connection event. 發起者此時作為Central role, 接收端作為Peripheral role.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://example.org/overview.jpg&#34; alt=&#34;Example of adv and connection event&#34; srcset=&#34;https://example.org/overview.jpg?size=small, https://example.org/overview.jpg?size=medium 1.5x, https://example.org/overview.jpg?size=large 2x&#34; data-title=&#34;Example of adv and connection event&#34; style=&#34;background: url(/images/loading.min.svg) no-repeat center;&#34; onload=&#34;this.title=this.dataset.title;for(const i of [&#39;style&#39;, &#39;data-title&#39;,&#39;onerror&#39;,&#39;onload&#39;]){this.removeAttribute(i);}this.dataset.lazyloaded=&#39;&#39;;&#34; onerror=&#34;this.title=this.dataset.title;for(const i of [&#39;style&#39;, &#39;data-title&#39;,&#39;onerror&#39;,&#39;onload&#39;]){this.removeAttribute(i);}&#34;/&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

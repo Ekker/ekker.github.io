@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Bt_overview - My New Hugo Site</title><meta name="author" content="">
+<meta name="description" content="Bluetooth Overview 在看藍芽相關規範時通常會先遇到下面這兩個名詞, 全名縮寫 BR/EDR- Basic Rate/Enhanced Data Rate BLE - Bluetooth Low Energy
+這兩個代表了藍芽在實作上不同的規範, 白話說就是有不同的物理實體實作跟通道管理方式. 在Spec中也常會看見, Profile, Protocol 兩個用詞. Profile - 通常代表一組服務或是功能, 用來標準化裝置間的溝通方式跟狀態. Protocol - 如同一班網路常見的http protocol 表示裝置間如何透過封包的定義互相傳輸資料.
+BLE
+advertising 發出的-&gt;advertiser 接收的 -&gt; scanner advertising可以發出 &ldquo;Connectable&rdquo; 可連接的adv , 然後發起連接的裝置(initiator) 會發出一個ACL 連線要求, 然後建立連線. 此時advertiser接收連線後會停止adv event, 然後根據連線建立的參數啟動connection event. 發起者此時作為Central role, 接收端作為Peripheral role. "><meta name="keywords" content='Bluetooth'>
+  <meta itemprop="name" content="Bt_overview">
+  <meta itemprop="description" content="Bluetooth Overview 在看藍芽相關規範時通常會先遇到下面這兩個名詞, 全名縮寫 BR/EDR- Basic Rate/Enhanced Data Rate BLE - Bluetooth Low Energy
+這兩個代表了藍芽在實作上不同的規範, 白話說就是有不同的物理實體實作跟通道管理方式. 在Spec中也常會看見, Profile, Protocol 兩個用詞. Profile - 通常代表一組服務或是功能, 用來標準化裝置間的溝通方式跟狀態. Protocol - 如同一班網路常見的http protocol 表示裝置間如何透過封包的定義互相傳輸資料.
+BLE
+advertising 發出的-&gt;advertiser 接收的 -&gt; scanner advertising可以發出 “Connectable” 可連接的adv , 然後發起連接的裝置(initiator) 會發出一個ACL 連線要求, 然後建立連線. 此時advertiser接收連線後會停止adv event, 然後根據連線建立的參數啟動connection event. 發起者此時作為Central role, 接收端作為Peripheral role.">
+  <meta itemprop="datePublished" content="2025-02-01T17:09:51+08:00">
+  <meta itemprop="dateModified" content="2025-02-01T17:09:51+08:00">
+  <meta itemprop="wordCount" content="51">
+  <meta itemprop="keywords" content="Bluetooth"><meta property="og:url" content="https://example.org/posts/a3a259c/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Bt_overview">
+  <meta property="og:description" content="Bluetooth Overview 在看藍芽相關規範時通常會先遇到下面這兩個名詞, 全名縮寫 BR/EDR- Basic Rate/Enhanced Data Rate BLE - Bluetooth Low Energy
+這兩個代表了藍芽在實作上不同的規範, 白話說就是有不同的物理實體實作跟通道管理方式. 在Spec中也常會看見, Profile, Protocol 兩個用詞. Profile - 通常代表一組服務或是功能, 用來標準化裝置間的溝通方式跟狀態. Protocol - 如同一班網路常見的http protocol 表示裝置間如何透過封包的定義互相傳輸資料.
+BLE
+advertising 發出的-&gt;advertiser 接收的 -&gt; scanner advertising可以發出 “Connectable” 可連接的adv , 然後發起連接的裝置(initiator) 會發出一個ACL 連線要求, 然後建立連線. 此時advertiser接收連線後會停止adv event, 然後根據連線建立的參數啟動connection event. 發起者此時作為Central role, 接收端作為Peripheral role.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-02-01T17:09:51+08:00">
+    <meta property="article:modified_time" content="2025-02-01T17:09:51+08:00">
+    <meta property="article:tag" content="Bluetooth">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bt_overview">
+  <meta name="twitter:description" content="Bluetooth Overview 在看藍芽相關規範時通常會先遇到下面這兩個名詞, 全名縮寫 BR/EDR- Basic Rate/Enhanced Data Rate BLE - Bluetooth Low Energy
+這兩個代表了藍芽在實作上不同的規範, 白話說就是有不同的物理實體實作跟通道管理方式. 在Spec中也常會看見, Profile, Protocol 兩個用詞. Profile - 通常代表一組服務或是功能, 用來標準化裝置間的溝通方式跟狀態. Protocol - 如同一班網路常見的http protocol 表示裝置間如何透過封包的定義互相傳輸資料.
+BLE
+advertising 發出的-&gt;advertiser 接收的 -&gt; scanner advertising可以發出 “Connectable” 可連接的adv , 然後發起連接的裝置(initiator) 會發出一個ACL 連線要求, 然後建立連線. 此時advertiser接收連線後會停止adv event, 然後根據連線建立的參數啟動connection event. 發起者此時作為Central role, 接收端作為Peripheral role.">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://example.org/posts/a3a259c/" title="Bt_overview - My New Hugo Site" /><link rel="prev" type="text/html" href="https://example.org/posts/10efd1f/" title="Test" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Bt_overview",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/example.org\/posts\/a3a259c\/"
+    },"genre": "posts","keywords": "Bluetooth","wordcount":  51 ,
+    "url": "https:\/\/example.org\/posts\/a3a259c\/","datePublished": "2025-02-01T17:09:51+08:00","dateModified": "2025-02-01T17:09:51+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="My New Hugo Site"><span class="header-title-text">My New Hugo Site</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="Switch Theme">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="My New Hugo Site"><span class="header-title-text">My New Hugo Site</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>Bt_overview</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      Anonymous</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/bluetooth/" class="post-category" title="Category - Bluetooth"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Bluetooth</a></span></div><div class="post-meta-line"><span title="published on 2025-02-01 17:09:51"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-02-01">2025-02-01</time></span>&nbsp;<span title="51 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 100 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>One minute</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#bluetooth-overview">Bluetooth Overview</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h3 id="bluetooth-overview" class="heading-element"><span>Bluetooth Overview</span>
+  <a href="#bluetooth-overview" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>在看藍芽相關規範時通常會先遇到下面這兩個名詞, 全名縮寫
+BR/EDR- Basic Rate/Enhanced Data Rate
+BLE - Bluetooth Low Energy</p>
+<p>這兩個代表了藍芽在實作上不同的規範, 白話說就是有不同的物理實體實作跟通道管理方式.
+在Spec中也常會看見, Profile, Protocol 兩個用詞.
+Profile - 通常代表一組服務或是功能, 用來標準化裝置間的溝通方式跟狀態.
+Protocol - 如同一班網路常見的http protocol 表示裝置間如何透過封包的定義互相傳輸資料.</p>
+<p>BLE</p>
+<ul>
+<li>advertising 發出的-&gt;advertiser</li>
+<li>接收的 -&gt; scanner</li>
+<li>advertising可以發出 &ldquo;Connectable&rdquo; 可連接的adv , 然後發起連接的裝置(initiator) 會發出一個ACL 連線要求, 然後建立連線. 此時advertiser接收連線後會停止adv event, 然後根據連線建立的參數啟動connection event. 發起者此時作為Central role, 接收端作為Peripheral role.</li>
+</ul>
+<p><img loading="lazy" src="/overview.jpg" alt="Example of adv and connection event" srcset="/overview.jpg?size=small, /overview.jpg?size=medium 1.5x, /overview.jpg?size=large 2x" data-title="Example of adv and connection event" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="Updated on 2025-02-01 17:09:51">Updated on 2025-02-01&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Share on X" data-sharer="twitter" data-url="https://example.org/posts/a3a259c/" data-title="Bt_overview" data-hashtags="Bluetooth"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://example.org/posts/a3a259c/" data-hashtag="Bluetooth"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://example.org/posts/a3a259c/" data-title="Bt_overview"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/bluetooth/" class="post-tag" title="Tags - Bluetooth">Bluetooth</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/10efd1f/" class="post-nav-item" rel="prev" title="Test"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Test</a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.142.0"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.17-8b402129"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">This website works best with JavaScript enabled.</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"version":"v0.3.17-8b402129"};</script><script src="/js/theme.min.js" defer></script></body>
+</html>
