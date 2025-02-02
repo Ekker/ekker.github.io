@@ -8,7 +8,14 @@
     <language>en-us</language>
     <managingEditor>ekkerG@gmail.com (Ekker)</managingEditor>
     <webMaster>ekkerG@gmail.com (Ekker)</webMaster>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Sun, 02 Feb 2025 17:57:10 +0800</lastBuildDate>
     <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Draft</title>
+      <link>https://example.org/tags/draft/</link>
+      <pubDate>Sun, 02 Feb 2025 17:57:10 +0800</pubDate><author>ekkerG@gmail.com (Ekker)</author>
+      <guid>https://example.org/tags/draft/</guid>
+      <description>Draft</description>
+    </item>
   </channel>
 </rss>

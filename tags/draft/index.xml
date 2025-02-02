@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Draft - Tag - Ekker - Apes together strong</title>
-    <link>http://localhost:1313/tags/draft/</link>
+    <link>https://example.org/tags/draft/</link>
     <description>Ekker - Apes together strong</description>
     <generator>Hugo 0.142.0 &amp; FixIt v0.3.17-8b402129</generator>
     <language>en-us</language>
     <managingEditor>ekkerG@gmail.com (Ekker)</managingEditor>
     <webMaster>ekkerG@gmail.com (Ekker)</webMaster>
     <lastBuildDate>Sun, 02 Feb 2025 17:57:10 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/draft/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/tags/draft/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coding</title>
-      <link>http://localhost:1313/posts/24ebe9b/</link>
+      <link>https://example.org/posts/24ebe9b/</link>
       <pubDate>Sun, 02 Feb 2025 17:57:10 +0800</pubDate><author>ekkerG@gmail.com (Ekker)</author>
-      <guid>http://localhost:1313/posts/24ebe9b/</guid>
-      <category domain="http://localhost:1313/categories/draft/">Draft</category>
+      <guid>https://example.org/posts/24ebe9b/</guid>
+      <category domain="https://example.org/categories/draft/">Draft</category>
       <description>Coding</description>
     </item>
     <item>
       <title>Bt_overview</title>
-      <link>http://localhost:1313/posts/a3a259c/</link>
+      <link>https://example.org/posts/a3a259c/</link>
       <pubDate>Sun, 02 Feb 2025 17:45:46 +0800</pubDate><author>ekkerG@gmail.com (Ekker)</author>
-      <guid>http://localhost:1313/posts/a3a259c/</guid>
-      <category domain="http://localhost:1313/categories/draft/">Draft</category>
+      <guid>https://example.org/posts/a3a259c/</guid>
+      <category domain="https://example.org/categories/draft/">Draft</category>
       <description>Bt_overview</description>
     </item>
     <item>
       <title>First</title>
-      <link>http://localhost:1313/posts/e1548a0/</link>
+      <link>https://example.org/posts/e1548a0/</link>
       <pubDate>Sun, 02 Feb 2025 17:25:00 +0800</pubDate><author>ekkerG@gmail.com (Ekker)</author>
-      <guid>http://localhost:1313/posts/e1548a0/</guid>
-      <category domain="http://localhost:1313/categories/draft/">Draft</category>
+      <guid>https://example.org/posts/e1548a0/</guid>
+      <category domain="https://example.org/categories/draft/">Draft</category>
       <description>First</description>
     </item>
   </channel>
