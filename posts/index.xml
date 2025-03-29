@@ -1,38 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>All Posts - Ekker - Apes together strong</title>
+    <title>Posts on Ekker - Apes together strong</title>
     <link>https://example.org/posts/</link>
-    <description>Ekker - Apes together strong</description>
-    <generator>Hugo 0.142.0 &amp; FixIt v0.3.17-8b402129</generator>
+    <description>Recent content in Posts on Ekker - Apes together strong</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <managingEditor>ekkerG@gmail.com (Ekker)</managingEditor>
-    <webMaster>ekkerG@gmail.com (Ekker)</webMaster>
     <lastBuildDate>Sun, 02 Feb 2025 17:57:10 +0800</lastBuildDate>
     <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coding</title>
       <link>https://example.org/posts/24ebe9b/</link>
-      <pubDate>Sun, 02 Feb 2025 17:57:10 +0800</pubDate><author>ekkerG@gmail.com (Ekker)</author>
+      <pubDate>Sun, 02 Feb 2025 17:57:10 +0800</pubDate>
       <guid>https://example.org/posts/24ebe9b/</guid>
-      <category domain="https://example.org/categories/draft/">Draft</category>
-      <description>Coding</description>
+      <description></description>
     </item>
     <item>
-      <title>Bt_overview</title>
+      <title>Bluetooth Overview</title>
       <link>https://example.org/posts/a3a259c/</link>
-      <pubDate>Sun, 02 Feb 2025 17:45:46 +0800</pubDate><author>ekkerG@gmail.com (Ekker)</author>
+      <pubDate>Sun, 02 Feb 2025 17:45:46 +0800</pubDate>
       <guid>https://example.org/posts/a3a259c/</guid>
-      <category domain="https://example.org/categories/draft/">Draft</category>
-      <description>Bt_overview</description>
+      <description>&lt;h1 id=&#34;introduction-to-bluetooth&#34;&gt;Introduction to Bluetooth&lt;/h1&gt;&#xA;&lt;p&gt;Bluetooth is a widely used wireless communication technology that has evolved over the years. This overview will provide insights into its history, core concepts, architecture, and practical applications.&lt;/p&gt;&#xA;&lt;h2 id=&#34;bluetooth-version-history&#34;&gt;Bluetooth Version History&lt;/h2&gt;&#xA;&lt;p&gt;The evolution of Bluetooth technology is marked by several key versions:&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Version&lt;/th&gt;&#xA;          &lt;th&gt;Release Year&lt;/th&gt;&#xA;          &lt;th&gt;Major Updates&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;4.0 (Low Energy)&lt;/td&gt;&#xA;          &lt;td&gt;2010&lt;/td&gt;&#xA;          &lt;td&gt;- Introduced Bluetooth Low Energy (BLE) for IoT and wearable devices.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;4.1&lt;/td&gt;&#xA;          &lt;td&gt;2013&lt;/td&gt;&#xA;          &lt;td&gt;- Improved interference with LTE. &lt;!-- raw HTML omitted --&gt;- BLE devices can act as both master and slave.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;4.2&lt;/td&gt;&#xA;          &lt;td&gt;2014&lt;/td&gt;&#xA;          &lt;td&gt;- Increased data transfer speed (10x packet capacity). &lt;!-- raw HTML omitted --&gt;- Supported IPv6, enhancing IoT applications.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;5.0&lt;/td&gt;&#xA;          &lt;td&gt;2016&lt;/td&gt;&#xA;          &lt;td&gt;- Increased data transfer speed to 2 Mbps. &lt;!-- raw HTML omitted --&gt;- Extended range up to 4 times. &lt;!-- raw HTML omitted --&gt;- Enhanced broadcast capacity for Beacon applications.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;5.1&lt;/td&gt;&#xA;          &lt;td&gt;2019&lt;/td&gt;&#xA;          &lt;td&gt;- Direction finding (AoA/AoD) for improved indoor positioning.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;5.2&lt;/td&gt;&#xA;          &lt;td&gt;2020&lt;/td&gt;&#xA;          &lt;td&gt;- LE Audio with support for LC3 audio codec. &lt;!-- raw HTML omitted --&gt;- Enhanced Attribute Protocol (EATT) for improved BLE connection efficiency.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;5.3&lt;/td&gt;&#xA;          &lt;td&gt;2021&lt;/td&gt;&#xA;          &lt;td&gt;- Improved BLE connection reliability. &lt;!-- raw HTML omitted --&gt;- Enhanced power management for longer battery life.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;5.4&lt;/td&gt;&#xA;          &lt;td&gt;2023&lt;/td&gt;&#xA;          &lt;td&gt;- Periodic Advertising with Response (PAwR) for better broadcast performance. &lt;!-- raw HTML omitted --&gt;- Encrypted Advertising Data for enhanced security.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;6.0&lt;/td&gt;&#xA;          &lt;td&gt;2024&lt;/td&gt;&#xA;          &lt;td&gt;- Channel Sounding for centimeter-level distance measurement. &lt;!-- raw HTML omitted --&gt;- Decision-based advertising filtering for improved scanning efficiency. &lt;!-- raw HTML omitted --&gt;- Enhanced Isochronous Adaptation Layer (ISOAL).&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;core-concepts-bredr-and-ble&#34;&gt;Core Concepts: BR/EDR and BLE&lt;/h2&gt;&#xA;&lt;p&gt;When exploring Bluetooth specifications, you will often encounter two key terms:&lt;/p&gt;</description>
     </item>
     <item>
       <title>First</title>
       <link>https://example.org/posts/e1548a0/</link>
-      <pubDate>Sun, 02 Feb 2025 17:25:00 +0800</pubDate><author>ekkerG@gmail.com (Ekker)</author>
+      <pubDate>Sun, 02 Feb 2025 17:25:00 +0800</pubDate>
       <guid>https://example.org/posts/e1548a0/</guid>
-      <category domain="https://example.org/categories/draft/">Draft</category>
-      <description>First</description>
+      <description></description>
     </item>
   </channel>
 </rss>
