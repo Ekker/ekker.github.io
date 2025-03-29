@@ -2,10 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://example.org/</loc>
+    <lastmod>2025-03-29T22:01:53+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/post/post_name/</loc>
+    <lastmod>2025-03-29T22:01:53+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/post/</loc>
+    <lastmod>2025-03-29T22:01:53+08:00</lastmod>
+  </url><url>
     <loc>https://example.org/categories/</loc>
     <lastmod>2025-02-02T17:57:10+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/24ebe9b/</loc>
+    <loc>https://example.org/post/24ebe9b/</loc>
     <lastmod>2025-02-02T17:57:10+08:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/draft/</loc>
@@ -14,22 +23,16 @@
     <loc>https://example.org/categories/draft/</loc>
     <lastmod>2025-02-02T17:57:10+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/</loc>
-    <lastmod>2025-02-02T17:57:10+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/posts/</loc>
-    <lastmod>2025-02-02T17:57:10+08:00</lastmod>
-  </url><url>
     <loc>https://example.org/tags/</loc>
     <lastmod>2025-02-02T17:57:10+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/a3a259c/</loc>
+    <loc>https://example.org/post/a3a259c/</loc>
     <lastmod>2025-02-02T17:45:46+08:00</lastmod>
   </url><url>
     <loc>https://example.org/about/</loc>
     <lastmod>2025-02-02T17:39:55+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/e1548a0/</loc>
+    <loc>https://example.org/post/e1548a0/</loc>
     <lastmod>2025-02-02T17:25:00+08:00</lastmod>
   </url>
 </urlset>
