@@ -10,7 +10,7 @@
   <meta itemprop="name" content="Bt_overview">
   <meta itemprop="datePublished" content="2025-02-02T17:45:46+08:00">
   <meta itemprop="dateModified" content="2025-02-02T17:45:46+08:00">
-  <meta itemprop="wordCount" content="268">
+  <meta itemprop="wordCount" content="247">
   <meta itemprop="keywords" content="Draft"><meta property="og:url" content="https://example.org/posts/a3a259c/">
   <meta property="og:site_name" content="Ekker - Apes together strong">
   <meta property="og:title" content="Bt_overview">
@@ -37,7 +37,7 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https:\/\/example.org\/posts\/a3a259c\/"
-    },"genre": "posts","keywords": "draft","wordcount":  268 ,
+    },"genre": "posts","keywords": "draft","wordcount":  247 ,
     "url": "https:\/\/example.org\/posts\/a3a259c\/","datePublished": "2025-02-02T17:45:46+08:00","dateModified": "2025-02-02T17:45:46+08:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
@@ -81,7 +81,7 @@
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>Bt_overview</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Ekker</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/draft/" class="post-category" title="Category - Draft"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Draft</a></span></div><div class="post-meta-line"><span title="published on 2025-02-02 17:45:46"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-02-02">2025-02-02</time></span>&nbsp;<span title="268 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 300 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>2 minutes</span>&nbsp;</div>
+      Ekker</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/draft/" class="post-category" title="Category - Draft"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Draft</a></span></div><div class="post-meta-line"><span title="published on 2025-02-02 17:45:46"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-02-02">2025-02-02</time></span>&nbsp;<span title="247 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 300 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>2 minutes</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>Contents</span>
@@ -95,11 +95,12 @@
         <li><a href="#bluetooth-core-stack">Bluetooth Core Stack</a></li>
       </ul>
     </li>
-    <li><a href="#ble-廣播與連線流程">BLE 廣播與連線流程</a>
-      <ul>
-        <li><a href="#example-advertising-and-connection-event">Example: Advertising and Connection Event</a></li>
-      </ul>
-    </li>
+    <li><a href="#ble-廣播與連線流程">BLE 廣播與連線流程</a></li>
+    <li><a href="#generic-access-profile">Generic Access Profile</a></li>
+    <li><a href="#gatt">GATT</a></li>
+    <li><a href="#att">ATT</a></li>
+    <li><a href="#le-audio">LE Audio</a></li>
+    <li><a href="#advanced-audio-profile">Advanced Audio profile</a></li>
     <li><a href="#藍芽在-android-aosp-的實作">藍芽在 Android AOSP 的實作</a></li>
   </ul>
 </nav></div>
@@ -176,8 +177,8 @@
 <p>這兩個代表藍芽在實作上的不同規範，簡單來說，就是有不同的物理實體實作和通道管理方式。</p>
 <p>在規範（Spec）中，也經常會看到以下兩個術語：</p>
 <ul>
-<li><strong>Profile</strong> - 代表一組服務或功能，用來標準化裝置間的溝通方式與狀態。例如，它描述了如何使用一個功能，包含狀態資訊等。</li>
-<li><strong>Protocol</strong> - 與網路常見的 HTTP Protocol 類似，表示裝置間如何透過封包的定義來互相傳輸資料。例如，它定義了封包結構、傳輸方式與溝通順序。</li>
+<li><strong>Profile</strong> - 代表一組服務或功能，用來標準化裝置間的溝通方式與狀態。例如，它描述了如何使用一個功能，包含狀態資訊等。 這邊稱為規範或配置</li>
+<li><strong>Protocol</strong> - 與網路常見的 HTTP Protocol 類似，表示裝置間如何透過封包的定義來互相傳輸資料。例如，它定義了封包結構、傳輸方式與溝通順序。 這邊稱為協定</li>
 </ul>
 <h2 id="藍芽架構bluetooth-architecture" class="heading-element"><span>藍芽架構（Bluetooth Architecture）</span>
   <a href="#%e8%97%8d%e8%8a%bd%e6%9e%b6%e6%a7%8bbluetooth-architecture" class="heading-mark">
@@ -192,11 +193,11 @@
 </h3><p>在藍芽軟體堆疊中，核心協議包含以下幾個部分：</p>
 <ul>
 <li><strong>GAP（Generic Access Profile）</strong>：規範如何廣播（advertising）與連接的狀態。</li>
-<li><strong>GATT/ATT（Generic Attribute Profile / Attribute Protocol）</strong></li>
-<li><strong>SMP（Security Manager Protocol）</strong></li>
-<li><strong>SDP（Service Discovery Protocol）</strong></li>
-<li><strong>L2CAP（Logical Link Control and Adaptation Protocol）</strong></li>
-<li><strong>HCI（Host Controller Interface）</strong></li>
+<li><strong>GATT/ATT（Generic Attribute Profile / Attribute Protocol）</strong> :GATT定義用來描述的結構組成是如何表述跟ATT傳輸封包的方式</li>
+<li><strong>SMP（Security Manager Protocol）</strong> :</li>
+<li><strong>SDP（Service Discovery Protocol）</strong> : BR/EDR規格下用來搜尋服務的協定</li>
+<li><strong>L2CAP（Logical Link Control and Adaptation Protocol）</strong> :用來抽象傳輸通道的協定</li>
+<li><strong>HCI（Host Controller Interface）</strong> :實際上跟硬體傳輸的介面</li>
 </ul>
 <p>在 HCI 之下，則包含 <strong>Link Manager（LM）</strong>，以及負責基頻與無線電的固件控制層。</p>
 <h2 id="ble-廣播與連線流程" class="heading-element"><span>BLE 廣播與連線流程</span>
@@ -215,32 +216,27 @@
 <li>連線建立後，根據參數啟動 <code>connection event</code></li>
 <li>發起連線的裝置變成 <strong>Central role</strong>，而接收連線的裝置變成 <strong>Peripheral role</strong></li>
 </ul>
-<h3 id="example-advertising-and-connection-event" class="heading-element"><span>Example: Advertising and Connection Event</span>
-  <a href="#example-advertising-and-connection-event" class="heading-mark">
+<h2 id="generic-access-profile" class="heading-element"><span>Generic Access Profile</span>
+  <a href="#generic-access-profile" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h3><pre class="mermaid">sequenceDiagram
-    participant Advertiser
-    participant Scanner
-    participant Initiator
-    participant Peripheral
-    
-    Advertiser->>Scanner: 發送 `advertising`
-    Scanner->>Initiator: 掃描廣播數據
-    Initiator->>Advertiser: 發送 `connection request`
-    Advertiser->>Peripheral: 建立連線，變成 Peripheral
-    Initiator->>Peripheral: 開始 `connection event`</pre>
-<template>sequenceDiagram
-    participant Advertiser
-    participant Scanner
-    participant Initiator
-    participant Peripheral
-    
-    Advertiser->>Scanner: 發送 `advertising`
-    Scanner->>Initiator: 掃描廣播數據
-    Initiator->>Advertiser: 發送 `connection request`
-    Advertiser->>Peripheral: 建立連線，變成 Peripheral
-    Initiator->>Peripheral: 開始 `connection event`</template><h2 id="藍芽在-android-aosp-的實作" class="heading-element"><span>藍芽在 Android AOSP 的實作</span>
+</h2><h2 id="gatt" class="heading-element"><span>GATT</span>
+  <a href="#gatt" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h2 id="att" class="heading-element"><span>ATT</span>
+  <a href="#att" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h2 id="le-audio" class="heading-element"><span>LE Audio</span>
+  <a href="#le-audio" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h2 id="advanced-audio-profile" class="heading-element"><span>Advanced Audio profile</span>
+  <a href="#advanced-audio-profile" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h2 id="藍芽在-android-aosp-的實作" class="heading-element"><span>藍芽在 Android AOSP 的實作</span>
   <a href="#%e8%97%8d%e8%8a%bd%e5%9c%a8-android-aosp-%e7%9a%84%e5%af%a6%e4%bd%9c" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
@@ -249,7 +245,14 @@
 <p>下載後可切換到特定的 commit 或 tag，例如 Android 12.1.0_r35：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git clone https://android.googlesource.com/platform/system/bt
 </span></span><span style="display:flex;"><span>cd bt
-</span></span><span style="display:flex;"><span>git checkout android-platform-12.1.0_r35</span></span></code></pre></div><p>這樣就可以查看 Android AOSP 中藍芽的具體實作！ 🚀</p></div><div class="post-footer" id="post-footer">
+</span></span><span style="display:flex;"><span>git checkout android-platform-12.1.0_r35</span></span></code></pre></div><p>這樣就可以查看 Android AOSP 中藍芽的具體實作</p>
+<p>在fluoride codebase裡面幾個常用的design pattern
+-factory pattern
+-singleton pattern
+-reactor pattern
+-adapter/facade pattern</p>
+<p>Linux system
+-socket, timerfd, signal</p></div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
       <div class="post-info-mod">
@@ -283,11 +286,5 @@
         </div></div><div id="mask"></div><noscript>
     <div class="noscript-warning">This website works best with JavaScript enabled.</div>
   </noscript>
-</div><script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.3.0/dist/mermaid.esm.min.mjs';
-    
-    
-    
-    window.mermaid = mermaid;
-  </script><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"mermaid":{"themes":["default","dark"]},"version":"v0.3.17-8b402129"};</script><script src="/js/theme.min.js" defer></script></body>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"version":"v0.3.17-8b402129"};</script><script src="/js/theme.min.js" defer></script></body>
 </html>
